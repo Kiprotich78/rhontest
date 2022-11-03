@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial scale=1.0">
+        <link rel="stylesheet" href="https://kdouglasrono.github.io/usave.github.io/reconciliation.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+        <script src="http://localhost/js/reconciliation.js"></script>
+    </head>
+    <body>
+        <div class="nav">
+            <ul>
+                <li><a href="/" style="color:white;">HOME</a></li>
+                <li>CHEWEN PETROL STATION</li>
+                <li><a href="http://localhost/php/1st.php"><button>LOG OUT</button></a></li>
+            </ul>
+        </div>
+        <div class="dash">
+            <div class="side">
+                <div class="dashboard">
+                    <a href="http://localhost:3000/dashboard">dashboard</a>                    
+                </div>
+                <div class="reconciliation">
+                    <p>reconciliations</p>
+                    <a href="http://localhost:3000/reconciliation"><img src="https://kdouglasrono.github.io/usave.github.io/canva payment.png" style="height:80%; width:95%;"></a>
+                </div>
+                <div class="analytics">
+                    <p>analytics</p>
+                    <a href="http://localhost:3000/analytics"><img src="https://kdouglasrono.github.io/usave.github.io/data3.png" style="height:80%; width:95%;"></a>
+                </div>
+                <div class="orders">
+                    <p>Make orders</p>
+                    <a href="http://localhost:3000/orders"><img src="https://kdouglasrono.github.io/usave.github.io/truck.png" style="height:80%; width:95%;"></a>
+                </div>
+                <div class="levels">
+                    <p>stock level</p>
+                    <a href="http://localhost:3000/stock"><img src="https://kdouglasrono.github.io/usave.github.io/gauge.png" style="height:60%; width:95%;"></a>
+                    <p>days remaining: 5</p>
+                </div>
+            </div>
+            <div class="main">
+                <div class="data">
+                    <div class="stock">
+                        <p>opening stock</p>
+                        <form name="opening stock">
+                            <label for="opening_petrol">petrol</label>
+                            <input type="text" name="opening_petrol" id="o_ptr_l" value="234567"><br/>
+                            <label>Diesel</label>
+                            <input type="number" name="opening_diesel" id="opening_diesel">
+                            <input type="submit" value="send">
+                        </form>
+                    </div>
+                    <div class="stock">
+                        <p>current stock</p>
+                        <form>
+                            <label>petrol</label>
+                            <input type="number"><br/>
+                            <label>Diesel</label>
+                            <input type="number">
+                            <input type="submit">
+                        </form>
+                    </div>
+                    <div class="stock">
+                        <p>sales in liters</p>
+                        <p>petrol<span id=""></span></p>
+                        <p>diesel<span id=""></span></p>
+                    </div>
+                </div>
+                <div class="summery">
+                    <div class="payment">
+                        <p style="text-align:center; "><i><b>Earnings</b></i></p><br/>
+                        <p>petrol<span id="cash"></span></p>
+                        <p>diesel<span id="cash"></span></p>
+                        <p>total<span id="cash"></span></p>
+                    </div>
+                    <div class="payment">
+                        <p style="text-align:center"><b><i>payments</i></b></p><br/>
+                        <p>cash<span id=""></span></p>
+                        <p>mobile money<span id=""></span></p>
+                        <p>Card<span id=""></span></p>
+                        <p>invoice<span id=""></span></p>
+                    </div>
+                </div>
+                <div class="excell">
+
+                </div>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,119 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://kdouglasrono.github.io/usave.github.io/contacts.css" />
+</head>
+<body>
+    <div class="nav">
+        <img src="https://kdouglasrono.github.io/usave.github.io/logo.png" />
+        <ul>
+            <li><a href="\">HOME</a></li>
+            <li><a href="http://localhost:3000/about">ABOUT</a></li>
+            <li><a href="http://localhost:3000/benefits">BENEFITS</a></li>
+            <li><a href="http://localhost:3000/contacts">CONTACTS</a></li>
+        </ul>
+        <div class="menu">
+            <button onclick="myFunction()" class="dropbutton">MENU</button>
+            <div id="myMenu" class="menu-content">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/about">ABOUT</a></li>
+                <li><a href="/benefits">BENEFITS</a></li>
+                <li><a href="/contacts">CONTACTS</a></li>
+            </div>
+        </div>
+    </div>
+    <!--script for button function-->
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myMenu").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbutton')) {
+                var dropdowns = document.getElementsByClassName("menu-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <div class="responsive">
+        <div class="container">
+            <div class="contact">
+                <p>
+                    <img src="https://kdouglasrono.github.io/usave.github.io/logo.png" /><br /><br /><br /><br /><br /><br />
+                    <br /><span style=" color:lawngreen;"> Contact us on</span> <br /><br /> +254727873698<br /><br />Begin your 
+                    journey on Digital process automation today by investing in our smart I.O.T and unlock the immense benefits of
+                    digitization and big data. Optimize information flows for competitive advantage.
+                </p>
+            </div>
+
+        </div>
+        <div class="container span-2">
+            <form action="https://formspree.io/f/mvodqjwo" method="POST">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">First Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Last Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="phonenumber">Phone number</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="phone" name="phone" placeholder="+254700000000">
+                        <!--
+                           <select id="country" name="country">
+                            <option value="australia">Australia</option>
+                            <option value="canada">Canada</option>
+                            <option value="usa">USA</option>
+                            </select>
+                        -->
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="email">email</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="email" name="email" placeholder="company@company.com">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="subject" name="subject" placeholder="your message.." style="height:200px"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Send Message">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

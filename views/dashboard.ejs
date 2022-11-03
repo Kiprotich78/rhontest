@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width = device - width initial-scale=1.0">
+        <link rel="stylesheet" href="https://kdouglasrono.github.io/usave.github.io/dashboard.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+        <script src="https://kdouglasrono.github.io/usave.github.io/auto.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+    <body>
+        <div class="nav">
+            <ul>
+                <li><a href="http://localhost:3000" style="color:white;">HOME</a></li>
+                <li>CHEWEN PETROL STATION</li>
+                <li>
+                    <form action="/logout?_method=DELETE" method="POST">
+                        <button type="submit">logout</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+        <div class="dash">
+            <h1 class="text-dark">Hello <%= name %>  </h1>
+            <div class="side">
+                <div class="dashboard">
+                    <a href="http://localhost:3000/dashboard">dashboard</a>                    
+                </div>
+                <div class="reconciliation">
+                    <p>reconciliations</p>
+                    <a href="/reconciliation"><img src="https://kdouglasrono.github.io/usave.github.io/canva payment.png" style="height:80%; width:95%;"></a>
+                </div>
+                <div class="analytics">
+                    <p>analytics</p>
+                    <a href="http://localhost:3000/analytics"><img src="https://kdouglasrono.github.io/usave.github.io/data3.png" style="height:80%; width:95%;"></a>
+                </div>
+                <div class="orders">
+                    <p>Make orders</p>
+                    <a href="http://localhost:3000/orders"><img src="https://kdouglasrono.github.io/usave.github.io/truck.png" style="height:80%; width:95%;"></a>
+                </div>
+                <div class="levels">
+                    <p>stock level</p>
+                    <a href="http://localhost:3000/stock"><img src="https://kdouglasrono.github.io/usave.github.io/gauge.png" style="height:60%; width:95%;"></a>
+                    <p>days remaining: 5</p>
+                </div>
+            </div>
+            <div class="main">
+                <div class="first">
+                    <div class="first1">
+                        <p>OPENING STOCK</p>
+                        <p>Petrol: <span id="petrol_opening"></span></p>
+                        <p>diesel: </p>
+                        <p id="ostock"></p>
+                    </div>
+                    <div class="first1">
+                        <p>total sales</p>
+                        <p>petrol: </p>
+                        <p>diesel: </p>
+                        <p id=""></p>
+                    </div>
+                    <div class="first1" style="font-size:small">
+                        <p>pump sales</p>
+                        <p>pump 1: </p>
+                        <p>pump 2: </p>
+                        <p>pump 3: </p>
+                        <p>pump 4: </p>
+                    </div>
+                    <div class="first1">
+                        <p>stock remaining</p>
+                        <p> petrol:</p>
+                        <p>diesel:</p>
+                    </div>
+                </div>
+                <div class = second>
+                    <div class="sales">
+                        <button>DAILY SALES</button>
+                        <button>WEAKLY SALES</button>
+                        <button>MONTHLY SALES</button>
+                        <button>YEARLY SALES</button>
+                    </div>
+                    <div class= "charts">
+                        <div class="dchart" style="height:60vh; width:100%">
+                            <canvas id="daily_chart"></canvas>
+                        </div>
+                        <div class="wchart" style="height:60vh; width:100%">
+                            <canvas id="weakly_chart"></canvas>
+                        </div>
+                        <div class="ychart" style="height:80vh; width:100%">
+                            <canvas id="monthly_chart"></canvas>
+                        </div>
+                        <div class="mchart" style="height:80vh; width:100%">
+                            <canvas id="yearly_chart"></canvas>
+                            <script src="https://kdouglasrono.github.io/usave.github.io/auto.js"></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
