@@ -1,4 +1,4 @@
-if (process.env.NODE_ENV !== "douglas*#!23") {
+if (process.env.NODE_ENV !== "rhondev") {
     require("dotenv").config()
 }
 
