@@ -1,0 +1,82 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+    padding:0 0% 0 0%;
+    background-color: black;
+}
+
+.main{
+    background-color: black;
+    width:100%;
+    height: 100%;
+}
+.start{
+    display:grid;
+    grid-gap:2em;
+    grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+}
+.image{
+    background-color: rgb(238, 238, 207);
+    padding:1em;
+    border-radius: 1em;
+    text-align:center;
+}
+.start .image img{
+    width: 10vw;
+    height:10vw;
+    border-radius: 1em;
+}
+.start .rhon{
+    background-color: rgb(231, 231, 194);
+    padding:3em;
+    border-radius: 1em;
+}
+.inrhon{
+    background-color: white;
+    text-align: center;
+    border-radius: 1em;
+    color:rgb(169, 59, 110)
+}
+.main .forms{
+    margin:2em 0 0 20vw;
+    background-color: white;
+    border-radius: 1em;
+    width:60%;
+    line-height: 1.5;
+}
+.forms{
+    padding:0 0 2em 0;
+}
+.forms p{
+    text-align:center;
+    font-size: large;
+}
+.forms p a button{
+    text-decoration: none;
+    font-size: large;
+    color: rgb(236, 79, 157);
+}
+.forms h2{
+    text-align: center;
+}
+.registration_form{
+    padding:0 10vw 0 10vw;
+}
+.registration_form button{
+    color:rgb(242, 79, 169);
+    width:100px;
+    height:30px;
+    margin: 1em 0 0 0;
+}
+label{
+    color:rgb(236, 63, 123);
+    font-size: large;
+}
+input{
+    width:100%;
+    line-height: 2;
+}

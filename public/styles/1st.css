@@ -1,0 +1,454 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    margin-top: 100px;
+    background-color:white;
+    width:100%;
+    padding:0 0% 0 0%;
+}
+.nav{
+    width:100%;
+    height:100px;
+    top:0;
+    position:fixed;
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+}
+.nav img{
+    float:left;
+    height:100px;
+}
+.nav ul{
+    padding:0 5vw 0 0;
+    float:right;
+}
+.nav ul li{
+    padding:2em 10vw 0 0;
+    display: inline-block;
+    list-style: none;
+}
+.nav ul li a{
+    float:right;
+    display:block;
+    text-decoration: none;
+    float:right;
+    font-family:verdana;
+    padding: 0 0 0 0;
+}
+.nav ul li a:hover{
+    font-size: 1.5em;
+    color:#e42a9f
+}
+.homeImage{
+    padding-top:10vh;
+    line-height: 2.0;
+    text-align:center;
+    color:white;
+    width:100%;
+    height:30vw;
+    background-color: rgb(19, 12, 17);
+    /*background-image: url("https://lh3.googleusercontent.com/P_rYcCVewzWnqNNI55aXCEbIsAHSNnmb7_Hl9WOe4HOq_nNb2_gEFiA9LlIzxl1pEw-rTtxc-Q-mgD-Hh-1tX7Xg0O5Ls20-8ZCf-YYQxHCaXHAL4IiVG8cG8uwNZE7SSLS1cI1v3uBz_14gwTuZJgmEd5U1sKyMDUFgFwsAp6hNdAhD9lZQBIu7qmlv-ki6tJHe3YGzPlr4Ts7i5VmNJi9hHNHJUSsmH7e7SD-C9kNWxY2gwdM6QHSAw8rdMkcNnQkLBcvwu_HlpeVbm5Sfb-85NqSv5cSbHdZAwX0kNCxDYUROQKdLsF4OZkkK4I6sNtRXYEgEUB3RDwxuhvxXXoYfjk36SfPBrEydFnkKhQadTWMptcYQobNmzo2nBGAkabjlXtP4Vt2cythjNDA411CTOFm86PZNBNZNAaEBo0ahYT3tp-aCpj8gwFIW4u2rRKuqTB_KzMjvBzuG-octfgH0xWzwDaOGM_9zFmKEmawTrKfhx8d9dtY78K_j3uNg80UXjV51ZyOGdOSvT-nLg_JuuWRUteBcje7O1FsApOhBXHHA37kjhG5eQx5kRBuQLAeEv8she08Pbi-XJkoq1voi-U926r6cCOYnk_n9qs6luIDkog0RJNZPb9WHe2Qfqq8mxeVA9_X-FjxkzlhRNBUvfu2yh8ie3YVvzbR8jnJx1bYPTr68c3HV630W4TWH3Q5brfplizYTmXSVDrhWwegfNKTBLVtHUWhuwOIhc5g4FgD60c4tIxiswNDLHnA=w1280-h720-no?authuser=0");
+*/
+}
+.homeImage .hustle h2{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+}
+.log button{
+    width:20%;
+    height:2em;
+}
+.image1{
+    margin-bottom: 15px;
+    width:100%;
+    height:10vw;
+}
+.image1 img{
+    float:left;
+    height:100%;
+    width:20%;
+    border-radius: 1em;
+    margin-left: 40px;
+}
+.image2{
+    width:100%;
+    height:10vw;
+}
+
+
+/* Full-width input fields */
+input[type=email], input[type=password], input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 0px 0px;
+    margin: 0px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height:2em;
+    border-radius: 1em;
+    font-size: large;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+.words{
+    color: rgb(111, 11, 111);
+    height:100%;
+    width:60%;
+    float:left;
+    background-color: white;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+}
+.image2 p{
+    font-family: verdana;
+}
+.image2 img{
+    float:right;
+    height:100%;
+    width:20%;
+    border-radius: 1em;
+    margin-right: 40px;
+    
+}
+.image3{
+    width:100%;
+    height:10vw;
+}
+.image3 img{
+    margin-top:20px;
+    width:20%;
+    float:left;
+    height:100%;
+    border-radius:1em;
+    margin-left: 40px;
+}
+.one{
+    padding:2em;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
+    grid-gap:2em;
+}
+.connect{
+    color: rgb(111, 11, 111);
+    padding: 2em;
+    border-radius: 2em;
+    font-family: nunito;
+    font-size: 24px;
+    box-shadow: 20px 20px 200px rgba(0,0,0,0.1);
+}
+.connect p{
+    text-align: justify;
+}
+.connect img{
+    width:100%;
+    height:100%;
+    padding:2ev;
+}
+.about{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width:100%;
+    padding:50px 2% 50px 2%;
+    text-align:justify;
+    background-color: white;
+    border-radius: 1em;
+}
+.about h3{
+    text-align: center;
+    font-size: 26px;
+    color: green;
+}
+.about p{
+    font-size:21px;
+}
+.facets{
+    padding: 0 2% 0 2%;
+}
+.benefits{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:1em;
+    display:grid;
+    grid-gap:2em;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    background-color: rgb(111, 11, 111);
+    border-radius: 1em;
+    margin:50px 0 50px 0;
+}
+.remote{
+    font-size: 18px;
+    padding:2em;
+    background-color:white;
+    border-radius: 2em;
+    text-align:justify;
+}
+.advantages{
+    padding:2em;
+    width:100%;
+    display:grid;
+    grid-gap:2em;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    border-radius: 1em;
+    margin:50px 0 50px 0;
+}
+.monitor{
+    padding:1em;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+    background-color: azure;
+}
+.monitor .head{
+    background-color: aliceblue;
+    border-radius: 2em;
+    padding:2em;
+    text-align: justify;
+}
+.monitor .photo{
+    background-color: #ccc;
+    border-radius: 2em;
+    padding:2em;
+}
+.monitor .photo img{
+    width:100%;
+    height:100%;
+    border-radius: 1em;
+}
+.payment{
+    padding:1em;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+    background-color: azure;
+}
+.payment .head{
+    background-color: aliceblue;
+    border-radius: 2em;
+    padding:2em;
+    text-align: justify;  
+}
+.payment .photo{
+    background-color: #ccc;
+    border-radius: 2em;
+    padding:2em;
+}
+.payment .photo img{
+    width:100%;
+    height:100%;
+    border-radius: 1em;
+}
+.data{
+    padding:1em;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+    background-color: azure;
+}
+.data .head{
+    background-color: aliceblue;
+    border-radius: 2em;
+    padding:2em;
+    text-align: justify; 
+}
+.data .photo{
+    background-color: #ccc;
+    border-radius: 2em;
+    padding:2em;
+}
+.data .photo img{
+    width:100%;
+    height:100%;
+    border-radius: 1em;
+}
+.li{
+    padding:1em;
+    background-color: whitesmoke;
+    border-radius:2em;
+    font-size: 20px;
+}
+.responsive {
+    padding: 3em;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    background-color:  rgb(111, 11, 111);
+    border-radius: 1em;
+}
+
+.container {
+    padding: 2em;
+    border-radius: 2em;
+    box-shadow: 20px 20px 200px rgba(0,0,0,0);
+}
+.contact p img{
+    width: 100%;
+    height: 20%;
+    float: left;
+    border-radius: 1em;
+}
+
+.contact {
+    float: left;
+    width: 300px;
+    text-align: justify;
+    line-height: 24px;
+}
+
+.contact p {
+    font-family: Verdana;
+    font-size: 16px;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: darkslategrey;
+    color: white;
+    padding: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: green;
+}
+
+.container {
+    border-radius: 2em;
+    background-color: ghostwhite;
+    padding: 2em;
+}
+
+.col-25 {
+    float: left;
+    width: 20%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 80%;
+    margin-top: 6px;
+}
+.span-2{
+    grid-column: auto/span 2;
+}

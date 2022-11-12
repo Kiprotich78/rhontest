@@ -12,7 +12,10 @@ const initializePassport = require("./passport-config")
 const flash = require("express-flash")
 const session = require("express-session")
 const methodOverride = require("method-override") //allow us to logout
-const { response } = require("express")
+const { response } = require("express");
+const mongoose = require("mongoose");
+const mongodb = require("mongodb");
+const schema = mongoose.Schema;
 
 initializePassport(
     passport,
@@ -20,9 +23,33 @@ initializePassport(
     id => users.find(user => user.id === id)
     )
 
+//connecting to mongoose
+/*
+mongoose.connect(process.env.MONGO_URI,{ useNewUrlParser: true, useUnifiedTopology: true },(err,success)=>{
+    if(err) console.log(err);
+    else{
+        console.log("connection successful");
+    }
+});
+
+//create schema for authentication
+
+const registrationSchema = new schema({
+    id:{type:String,required:true,index:{unique:true}},
+    password:{type:String,required:true},
+    FirstName:{type:String,required:true},
+    LastName: {type:String,required:true},
+    Email: String
+});
+*/
+//define a model
 
 
+//using arrays for registration
 const users = []
+//static resources(photos $ styles)
+app.use('/public', express.static(__dirname + "/public"));
+
 
 app.use(express.urlencoded({extended: false}))
 app.use(flash())
@@ -127,4 +154,6 @@ function checkNotAuthenticated(req, res, next){
     next()
 }
 
-app.listen(3000)
+app.listen(3000, function(){
+    console.log("listening on port 3000");
+})

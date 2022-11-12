@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    margin-top: 60px;
+    padding:0;
+    width:100%;
+}
+.nav{
+    padding:1em;
+    color:white;
+    width:100%;
+    height:50px;
+    top:0;
+    position:fixed;
+    background-color:rgb(51, 12, 50);
+}
+.nav ul{
+    float:left;
+    padding-left: 20%;
+}
+.nav ul li{
+    display:inline-block;
+    padding-right:200px;
+}
+.dash{
+    width:100%;
+}
+.dash .side{
+    background-color: rgb(116, 183, 85);
+    width:20%;
+    float:left;
+    height:100vh;
+}
+.dash .main{
+    background-color: rgb(241, 235, 235);
+    width:80%;
+    float:right;
+    padding: 1em;
+    height:100vh;
+}
+.side{
+    padding:1em;
+    border-radius: 2em;
+}
+.side img{
+    border-radius: 1em;
+}
+.dashboard{
+    text-align: center;
+    border-radius: 1em;
+    background-color: antiquewhite;
+}
+.dashboard a{
+    font-size: larger;
+    text-decoration: none;
+}
+.reconciliation{
+    text-align: center;
+    margin:1em;
+    height:20vh;
+    background-color: antiquewhite;
+    border-radius: 1em;
+
+}
+.analytics{
+    margin:1em;
+    height:20vh;
+    background-color: rgb(169, 115, 219);
+    border-radius: 1em;
+    text-align: center;
+
+}
+.orders{
+    height:20vh;
+    background-color: rgb(218, 104, 150);
+    border-radius: 1em;
+    text-align: center;
+    margin:1em;
+}
+.levels{
+    height:20vh;
+    background-color: rgb(223, 153, 68);
+    border-radius: 1em;
+    text-align: center;
+    margin:1em;
+}
+.order{
+    height:60vh;
+    background-color: black;
+    color:white;
+    padding: 15vh;
+    text-align: center;
+}
+.forder{
+    background-color: rgb(75, 75, 37);
+    border-radius: 1em;
+    width:40vh;
+    height:3em;
+    margin:10vh 0 0 48vh;
+    padding:0.5em;
+}
+.forder:hover{
+    background-color: yellowgreen;
+}
+.safe{
+    margin-top: 10vh;
+    width:100%;
+    height:10vh;
+    text-align: center;
+}
+.adv{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap:1em;
+}
+.advantages{
+    height:10vh;
+    border-radius: 1em;
+    text-align:center;
+    background-color: rgb(85, 181, 157);
+}

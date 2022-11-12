@@ -1,0 +1,149 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    margin-top: 100px;
+    background-color:white;
+    width:100%;
+    padding:0 0% 0 0%;
+}
+.navbar{
+    width:100%;
+    height:100px;
+    top:0;
+    position:fixed;
+    background-color: white;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+}
+.navbar img{
+    float:left;
+    height:100px;
+}
+.navbar ul{
+    padding:0 10% 0 0;
+    float:right;
+}
+.navbar ul li{
+    padding:30px 40px 20px 0;
+    list-style: none;
+    display:inline-block;
+}
+.navbar ul li a{
+    float:right;
+    display:block;
+    text-decoration: none;
+    float:right;
+    font-family:verdana;
+    padding: 0 60px 0 0;
+}
+.check{
+    padding-top: 20vh;
+    width:100%;
+    background-color: black;
+    height:60vh;
+    border-radius: 0em;
+}
+.check h1{
+    font-size: 38px;
+    text-align: center;
+    color:white;
+    font-family: sans-serif;
+    
+}
+.check h2{
+    font-size: 38px;
+    text-align: center;
+    color:white;
+    font-family: sans-serif;
+}
+.check h2 a{
+    color:white;
+    text-decoration: none;
+}
+.check hr{
+    margin-left: 20vw;
+    height:10px;
+    background-color:yellow
+}
+.about{
+    padding-top:40px;
+    text-align: justify;
+    font-size: larger;
+}
+.mis{
+    line-height: 1.5;
+    width:100%;
+    height:20vh;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+}
+.mis .mi{
+    padding:1em;
+    background-color: blueviolet;
+    color:white;
+}
+.mis .vi{
+    padding:1em;
+    border-radius: 0;
+    background-color: rgb(121, 38, 172);
+    color:white;
+}
+.core{
+    padding-top: 4em;
+    text-align: center;
+    color:blueviolet
+}
+.values{
+    line-height:1.5;
+    width:100%;
+    height:50vh;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:1em;
+}
+.values .v{
+    padding:10px;
+    border-radius: 2em;
+    background-color: white;
+    padding:2em;
+}
+.end{
+    color:white;
+    padding:20px;
+    border-radius: 2em;
+    width:100%;
+    height:50vh;
+    background-color: blueviolet;
+}
+.footer{
+    padding:40px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    font-size: large;
+
+}
+.footer .navigation ul li{
+    list-style: none;
+    line-height:1.5;
+}
+.footer .solutions ul li{
+    list-style: none;
+    line-height: 1.5;
+} 
+.footer .contacts ul li{
+    list-style: none;
+    line-height:1.5;
+}  
+.cont{
+    width:80%;
+    border-radius: 2em;
+    background-color: rgb(175, 156, 193);
+    text-align: center;
+}
+.cont a{
+ color:azure;
+ font-size:larger;
+}

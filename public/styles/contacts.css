@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav img {
+    margin-left: 2.5%;
+    width: 8%;
+    height: 100%;
+    float: left;
+}
+
+body {
+    margin-top: 100px;
+    background-color: white;
+    width: 100%;
+}
+
+.nav {
+    width: 100%;
+    height: 100px;
+    top: 0;
+    position: fixed;
+    background-color: white;
+}
+
+.nav ul {
+    padding: 0 0% 0vw 10vw;
+    float: left;
+}
+
+.nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding:0;
+    line-height: 100px;
+}
+
+.nav ul li a {
+    display: block;
+    text-decoration: none;
+    font-family: Verdana;
+    color: rgb(111, 11, 111);
+    font-size: 16px;
+    padding:0 0 0 10vw;
+    float: right;
+}
+
+.nav ul li a:hover {
+    color: rgb(170, 44, 143);
+    font-size: 24px;
+}
+.responsive {
+    padding: 3em;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    background-color: black;
+    border-radius: 0;
+}
+
+.container {
+    padding: 2em;
+    border-radius: 2em;
+    box-shadow: 20px 20px 200px rgba(0,0,0,0);
+}
+.contact p img{
+    margin-left: 2.5%;
+    width: 100%;
+    height: 40%;
+    float: left;
+}
+
+.contact {
+    float: left;
+    width: 300px;
+    text-align: justify;
+    line-height: 24px;
+}
+
+.contact p {
+    font-family: Verdana;
+    font-size: 16px;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: darkslategrey;
+    color: white;
+    padding: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: green;
+}
+
+.container {
+    border-radius: 2em;
+    background-color: ghostwhite;
+    padding: 2em;
+}
+
+.col-25 {
+    float: left;
+    width: 20%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 80%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}*/
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+    .responsive {
+        padding: 0;
+        margin: 20px 0 0 0;
+        width: 100vw;
+    }
+
+    .container {
+        width: 100vw;
+        padding: 1em;
+    }
+
+    .contact {
+        width: 100%;
+    }
+
+    .contact p img {
+        float: left;
+    }
+}
+
+@media(min-width:550px) {
+    .span-2 {
+        grid-column: auto/span 2;
+    }
+}
+@media(max-width:800px) {
+    .dropbutton {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    img {
+        float: right;
+    }
+}
+
+@media(min-width:800px) {
+    .dropbutton {
+        display: none;
+    }
+}
+
+.dropbutton {
+    background-color: darkslategrey;
+    border-radius: 1em;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    line-height: 80px;
+}
+
+    .dropbutton:hover, .dropbutton:focus {
+        background-color: darkseagreen;
+    }
+
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    background-color: darkslategrey;
+    min-width: 200px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .menu-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+.menu a:hover {
+    background-color: dimgray;
+}
+
+.show {
+    display: block;
+}
+
