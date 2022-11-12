@@ -1,11 +1,9 @@
-/*
 if (process.env.NODE_ENV !== "douglas*#!23") {
     require("dotenv").config()
 }
-*/
+
 
 // Importing Libraies that we installed using npm
-require("dotenv").config();
 const express = require("express")
 const app = express()
 const bcrypt = require("bcrypt") // Importing bcrypt package
@@ -14,10 +12,7 @@ const initializePassport = require("./passport-config")
 const flash = require("express-flash")
 const session = require("express-session")
 const methodOverride = require("method-override") //allow us to logout
-const { response } = require("express");
-const mongoose = require("mongoose");
-const mongodb = require("mongodb");
-const schema = mongoose.Schema;
+const { response } = require("express")
 
 initializePassport(
     passport,
@@ -25,43 +20,19 @@ initializePassport(
     id => users.find(user => user.id === id)
     )
 
-//connecting to mongoose
-/*
-mongoose.connect(process.env.MONGO_URI,{ useNewUrlParser: true, useUnifiedTopology: true },(err,success)=>{
-    if(err) console.log(err);
-    else{
-        console.log("connection successful");
-    }
-});
-
-//create schema for authentication
-
-const registrationSchema = new schema({
-    id:{type:String,required:true,index:{unique:true}},
-    password:{type:String,required:true},
-    FirstName:{type:String,required:true},
-    LastName: {type:String,required:true},
-    Email: String
-});
-*/
-//define a model
 
 
-//using arrays for registration
 const users = []
 //static resources(photos $ styles)
 app.use('/public', express.static(__dirname + "/public"));
 
-
 app.use(express.urlencoded({extended: false}))
 app.use(flash())
-
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false, // We wont resave the session variable if nothing is changed
     saveUninitialized: false
-}));
-
+}))
 app.use(passport.initialize()) 
 app.use(passport.session())
 app.use(methodOverride("_method"))
