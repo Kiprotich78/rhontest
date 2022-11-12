@@ -1,9 +1,11 @@
+/*
 if (process.env.NODE_ENV !== "douglas*#!23") {
     require("dotenv").config()
 }
-
+*/
 
 // Importing Libraies that we installed using npm
+require("dotenv").config();
 const express = require("express")
 const app = express()
 const bcrypt = require("bcrypt") // Importing bcrypt package
@@ -53,11 +55,13 @@ app.use('/public', express.static(__dirname + "/public"));
 
 app.use(express.urlencoded({extended: false}))
 app.use(flash())
+
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false, // We wont resave the session variable if nothing is changed
     saveUninitialized: false
-}))
+}));
+
 app.use(passport.initialize()) 
 app.use(passport.session())
 app.use(methodOverride("_method"))
