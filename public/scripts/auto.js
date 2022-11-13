@@ -236,7 +236,7 @@ var wchart = document.getElementById('weakly_chart').getContext('2d');
             }
         }
     });
-    
+
 //Get Data from the database
 async function fetchData() {
     let authToken;
@@ -286,3 +286,78 @@ fetchData().then(res => {
     //output json data from the database
     console.log(res);
 });
+
+/*
+* Simulatae data to be Sent to database by Safaricom
+*/
+
+//simulateDataFromSafaricomApi();
+function simulateDataFromSafaricomApi() {
+    fetchResults();
+
+    function fetchResults() {
+        fetch('http://localhost:4444/confirmation', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(getJsonToSend())
+        })
+            .then(res => {
+                return res.json();
+            })
+            .then(res => {
+                console.log(res);
+            })
+            .catch(err => {
+                console.log(err.message);
+            });
+    }
+
+    function getJsonToSend() {
+        let dt = new Date();
+        let year = dt.getFullYear();
+        let month = dt.getMonth() + 1;
+        let day = dt.getDate();
+        day < 10 ? day = "0" + day : day = day
+        let hour = dt.getHours();
+        let minutes = dt.getMinutes();
+        let seconds = dt.getSeconds();
+
+        let transTime = (`${year}${month}${day}${hour}${minutes}${seconds}`);
+        let json = {
+            "TransactionType": "Pay Bill",
+            "TransID": `${generateRandomName(10).toUpperCase()}`,
+            "TransTime": transTime,
+            "TransAmount": `${generateNumber(5)}`,
+            "BusinessShortCode": "600638",
+            "BillRefNumber": "A123",
+            "InvoiceNumber": "",
+            "OrgAccountBalance": "49197.00",
+            "ThirdPartyTransID": "",
+            "MSISDN": `2547${generateNumber(8)}`,
+            "FirstName": `${generateRandomName(8)}`
+        }
+        
+        return json;
+    }
+
+    function generateNumber(num) {
+        let amount = "";
+        for (let i = 1; i < num; i++) {
+            amount += Math.floor(Math.random() * 9).toString();
+        }
+        return amount;
+
+    }
+
+    function generateRandomName(num) {
+        let res = '';
+        for (let i = 0; i < num; i++) {
+            const random = Math.floor(Math.random() * 26);
+            res += String.fromCharCode(97 + random);
+        };
+        return res;
+    }
+
+}
