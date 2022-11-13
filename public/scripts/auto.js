@@ -236,7 +236,8 @@ var wchart = document.getElementById('weakly_chart').getContext('2d');
             }
         }
     });
-
+    
+//Get Data from the database
 async function fetchData() {
     let authToken;
     let Data;
@@ -277,8 +278,11 @@ async function fetchData() {
         })
         .catch(res => console.log(res.message))
     
-    return Data;
+    return Data; //returns a promise
 
 }
 
-fetchData().then(res => console.log(res));
+fetchData().then(res => {
+    //output json data from the database
+    console.log(res);
+});
