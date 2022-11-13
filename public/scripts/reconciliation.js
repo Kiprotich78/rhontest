@@ -52,8 +52,15 @@ for(var i=0;i<38;i++){
     }
 }
 var total_diesel_sales = diesel_payments["cash"].reduce(function(a,b){return a + b},0) + diesel_payments["cards"].reduce(function(a,b){return a + b},0) + diesel_payments["mobile money"].reduce(function(a,b){return a + b},0) + diesel_payments["invoice"].reduce(function(a,b){return a + b},0);
+
 console.log("cash: ",diesel_payments["cash"],diesel_payments["cash"].length);
 console.log("cards: ",diesel_payments["cards"],diesel_payments["cards"].length);
 console.log("mobile: ",diesel_payments["mobile money"],diesel_payments["mobile money"].length);
 console.log("invoice: ",diesel_payments["invoice"],diesel_payments["invoice"].length);
 console.log("total diesel sales =:", total_diesel_sales);
+
+getMpesaTransactions();
+
+function getMpesaTransactions() {
+    console.log('helloo world');
+}
